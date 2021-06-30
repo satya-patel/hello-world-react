@@ -7,19 +7,27 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      userName: ''
+      userName: '',
+      nameError: ''
     }
   }
 
   //onClick Function
-  onClick = (Sevent) => {
-    console.log("save button is clicked", Sevent);
+  onClick = ($event) => {
+    console.log("save button is clicked", $event);
     window.open(this.url, "._blank");
   }
   onNameChange = (event) => {
     console.log("value is",event.target.value);
+    const nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
     //set the title using setstate method
-    this.state({userName: event.target.value})
+    this.setState({userName: event.target.value})
+    if (nameRegex.test(event.target.value)){
+      this.setState({nameError: ''})
+    }else{
+        this.setState({nameError:'Name Is Incorrect'})
+      
+    }
   }
   render() {
   return (
@@ -32,10 +40,9 @@ class App extends React.Component {
 
       <div>
         <input onChange={this.onNameChange} />
+        <span className="error-output">{this.state.nameError}</span>
       </div>
     </>
-
-
     );
   }
 }
