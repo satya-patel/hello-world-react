@@ -31,9 +31,9 @@ class App extends React.Component {
   }
   render() {
   return (
-    <>
     <div>
-      <h1>hello{this.state.userName}from Bridgelabz</h1>
+    <div>
+      <h1>Hello {this.state.userName} from Bridgelabz</h1>
       <img src={logo} onClick={this.onClick}
         alt="The BridgeLabz logo : a Bridge to Employment through lab works" />
       </div>
@@ -42,7 +42,24 @@ class App extends React.Component {
         <input onChange={this.onNameChange} />
         <span className="error-output">{this.state.nameError}</span>
       </div>
-    </>
+
+      <div>
+      <p>At BridgeLabz, we're a community of</p>
+      <ul>
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+      </ul>
+      <p>Working together to keep the Tech Employability of Engineers alive and accessible,
+      so Tech Companies worldwide can get contributors and creators for Technology Solutions.We beleive
+      this act of human collabration across an employability platform is essential to individual
+      growth and our collective future.
+      </p>
+
+      <p>To know about us, visit <a href="https://www.bridgelabz.com/">Bridge Labz</a>
+      to learn evem more about our mission i.e. <strong> Employability to all</strong>.</p>
+      </div>
+      </div>
     );
   }
 }
