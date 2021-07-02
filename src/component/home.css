@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    font-size: xx-large;
+  }
+  
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    cursor: pointer;
+  }
+  
+  .text-box{
+    margin-right: 40%;
+  }
+  
+  .error-output{
+    margin-left: 40%;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  }
+  
+  html{
+    background-color : #00539F;
+  }
+  
+  body{
+    width:900px;
+    margin: 0 auto;
+    background-color:#FF9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black; 
+  }
+  
+  h1{
+    font-size: 60px;
+    text-align:center;
+  }
+  h1{
+    margin:0;
+    padding: 20px 0;
+    color : #00539F;
+    text-shadow: 3px 3px 3px black;
+  }
+  
+  p,li{
+    font-size:16px;
+    line-height:2;
+    letter-spacing: 1px;
+  }
